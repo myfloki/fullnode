@@ -1,0 +1,15 @@
+
+services:
+
+  flokicoin_peer:
+    image: ghcr.io/myfloki/flokicoin:latest
+    hostname: mainnet-flokicoin-peer
+    container_name: mainnet-flokicoin-peer
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      - "15212:15212" 
+    volumes:
+      - ./data:/node
+    command: "flokicoind -C=/node/flokicoind.conf --txindex" # --debuglevel=trace
+
