@@ -11,5 +11,5 @@ services:
       - "15212:15212" 
     volumes:
       - ./data:/node
-    command: "flokicoind -C=/node/flokicoind.conf --txindex" # --debuglevel=trace
+    command: "flokicoind -C=/node/flokicoind.conf"
 
