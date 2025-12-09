@@ -2,14 +2,15 @@
 services:
 
   flokicoin_peer:
-    image: ghcr.io/myfloki/flokicoin:latest
+    image: ghcr.io/myfloki/flokicoin:0.25.6-beta-prod
     hostname: mainnet-flokicoin-peer
     container_name: mainnet-flokicoin-peer
     restart: on-failure
     stop_grace_period: 1m
     ports:
       - "15212:15212" 
+      - "15213:15213" 
     volumes:
       - ./data:/node
-    command: "flokicoind -C=/node/flokicoind.conf"
+    command: "lokid -C=/node/lokid.conf"
 
