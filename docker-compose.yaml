@@ -2,7 +2,7 @@
 services:
 
   flokicoin_peer:
-    image: ghcr.io/myfloki/flokicoin:0.25.6-beta-prod
+    image: ghcr.io/myfloki/flokicoin:latest
     hostname: mainnet-flokicoin-peer
     container_name: mainnet-flokicoin-peer
     restart: on-failure
