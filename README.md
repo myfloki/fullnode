@@ -21,6 +21,9 @@ Before starting the services, you can customize your installation:
 - **`.env`**: Modify the docker image version.
 - **`data/lokid.conf`**: Adjust peer-to-peer and RPC settings.
 
+> [!CAUTION]
+> **IMPORTANT**: Review your configuration files (e.g., `.env`, `flnd.conf`, `lokid.conf`) and replace any placeholder credentials (like `YOUR_RPC_PASSWORD`) with secure, custom passwords before starting the services.
+
 ### 3. Start the Node
 Now that everything is configured, start the services:
 
