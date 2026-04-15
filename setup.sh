@@ -56,6 +56,15 @@ if [ ! -f .env ]; then
     else
         echo "IMAGE_NAME=ghcr.io/myfloki/flokicoin:latest" > .env
     fi
+
+# Copy all .sample files to their actual names if they dont exist
+find . -name "*.sample" | while read -r sample_file; do
+    real_file="${sample_file%.sample}"
+    if [ ! -f "$real_file" ]; then
+        echo "📄 Creating $real_file from sample..."
+        cp "$sample_file" "$real_file"
+    fi
+done
 fi
 
 if [ ! -f data/lokid.conf ]; then
