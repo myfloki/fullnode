@@ -1,5 +1,4 @@
-!data/**/*.sample
-!data/**/.keep
 .env
 data/**
-data/lokid.conf
+!data/**/.keep
+!data/**/*.sample
